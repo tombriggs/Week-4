@@ -3,18 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Form </title>
+    <style>
+        .qtable, .qtablesubmit {
+		margin-left: auto; 
+		margin-right: auto; 
+		margin-bottom: 10px;
+		width: 640px;
+		padding-right: 20px;
+		padding-bottom: 10px;
+	}
+        .qtable {
+		background-color: #FFFFFF; 
+		border-radius: 8px; 
+		border: 1px solid #dadce0;
+		padding-left: 20px;
+		padding-top: 10px;
+	}
+	.pageheader {
+		font-size: 32px; 
+		font-family: Helvetica; 
+		font-weight: 400;
+		margin-bottom: 12px;
+	}
+	.formitem, .formitemcheck {
+		border-top: 0px; 
+		border-left: 0px; 
+		border-right: 0px;
+		margin-top: 20px;
+		border-color: #d3d3d3;
+	}
+	.formitem {
+		width: 50%; 
+	}
+	.formitemcheck {
+		margin-right: 10px; 
+	}
+	.formlabel {
+		padding-bottom: 16px;
+		font-family: 'Google Sans', Roboto, Helvetica, Arial, sans-serif;
+	}
+	.submitbutton {
+		background-color: rgb(103, 58, 183); 
+		color: #FFFFFF; 
+		height: 36px; 
+		width: 95px;
+		border-radius: 4px; 
+	}
+    </style>
 </head>
-<body>
-<h3>
-    Form Design Exercise:
-</h3>
-<p style="font-family: Helvetica;font-size: medium">
-    Disregarding the style of the page: <br>
-    <a href="https://forms.gle/qjz8MKR4YXWkWCVLA">https://forms.gle/qjz8MKR4YXWkWCVLA</a>
-</p>
-<p style="font-family: Helvetica;font-size: medium">
-    Try to replicate the format of the form in the page.<br>
-    Make use of "Label", "Input" and "Table".
-</p>
+<body style="background-color: #ede7f6; font-family: 'Google Sans', Roboto, Helvetica, Arial, sans-serif;">
+
+<table class="qtable">
+	<tr><td><div class="pageheader">Sample Form</div>
+			Choose a topic, and research interest for the individual visualization project.<br/>
+			<hr/>
+			<a href="https://accounts.google.com/Login?continue=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSe62Sov78NzTTaQds15PXmanCT_muKKXAPh7Ee-xDGKYf26Zg%2Fviewform%3Ffbzx%3D-6403291375229907299">Sign in to Google</a> to save your progress.<br/>
+			<p style="color: #FF0000">* Required</p>
+	</td></tr>
+</table>
+
+<form>
+    <table class="qtable">
+        <tr><td>
+		<label for="email" class="formlabel">Email <span style="color: #FF0000;">*</span></label></br>
+		<input type="text" class="formitem" name="email">
+        </td></tr>
+    </table>
+
+    <table class="qtable">
+        <tr><td>
+		<label for="email" class="formlabel">First Name</label></br>
+		<input type="text" class="formitem" name="firstname">
+        </td></tr>
+    </table>
+
+    <table class="qtable">
+        <tr><td>
+		<label for="email" class="formlabel">Last Name</label></br>
+		<input type="text" class="formitem" name="lasname">
+        </td></tr>
+    </table>
+
+    <table class="qtable">
+        <tr><td>
+		<label for="email" class="formlabel">Research interests (list at least 3) <span style="color: #FF0000;">*</span></label></br>
+		<input type="text" class="formitem" name="researchinterests">
+        </td></tr>
+    </table>
+
+    <table class="qtable">
+        <tr><td>
+		<label for="email" class="formlabel">Project Title - (e.g. income vs education US Census)<span style="color: #FF0000;">*</span></label></br>
+		<input type="text" class="formitem" name="researchinterests">
+        </td></tr>
+    </table>
+
+    <table class="qtable">
+        <tr><td>
+		<span class="formlabel">Top Skills <span style="color: #FF0000;">*</span></span></br>
+		<input type="checkbox" class="formitemcheck" name="sql"><label for="sql" class="formlabel">SQL</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="python" class="formlabel">Python programming</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="matlab" class="formlabel">Matlab</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="d3js" class="formlabel">D3js</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="vb" class="formlabel">C# VB.net</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="php" class="formlabel">PHP</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="nodejs" class="formlabel">Node.JS</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="webdesign" class="formlabel">Web design tools (e.g. Wordpress)</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="htmlcss" class="formlabel">HTML and CSS</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="excel" class="formlabel">Excel</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="powerbi" class="formlabel">PowerBI</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="tableau" class="formlabel">Tableau</label><br/>
+		<input type="checkbox" class="formitemcheck" name="python"><label for="other" class="formlabel" style="margin-right: 10px">Other:</label><input type="text" class="formitem" name="skillsother">
+        </td></tr>
+    </table>
+
+    <table class="qtable">
+        <tr><td>
+		<label for="email" class="formlabel">Suggestions or Questions</label></br>
+		<input type="text" class="formitem" name="questions">
+        </td></tr>
+    </table>
+
+    <table class="qtablesubmit">
+        <tr><td>
+		<input type="submit" class="submitbutton" value="Submit">
+        </td></tr>
+    </table>
+</form>
+
+
 </body>
 </html>
